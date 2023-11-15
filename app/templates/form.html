@@ -1,0 +1,36 @@
+{% extends 'includes/layout.html' %}
+
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Sentiment Analyst</h1>
+    <p class="lead">
+      web prototype sentiment Analyst
+    </p>
+
+    <form method="post">
+
+      <div class="mb-3">
+        <input type="text" class="form-control form-control-lg" name="sentiment" placeholder="eg. this bad product">
+        <div class="form-text">Enter your sentiment.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg">SUBMIT</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4>The Sentiment of '{{ text }}' is:</h4>
+        <h4>{{ sentiment }}!</h4>
+
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
